@@ -1,0 +1,34 @@
+<svg width="64" height="64" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Light gloss -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)" />
+      <stop offset="40%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+
+    <!-- Soft shadow inside -->
+    <filter id="innerGlow">
+      <feGaussianBlur stdDeviation="6" result="glow" />
+      <feComposite in="glow" in2="SourceGraphic" operator="atop"/>
+    </filter>
+  </defs>
+
+  <!-- Background card -->
+  <rect width="160" height="160" rx="22" fill="#0F0F0F" />
+
+  <!-- Gloss overlay -->
+  <rect width="160" height="160" rx="22" fill="url(#gloss)" />
+
+  <!-- DZ Shape -->
+  <path d="M35 35 H125 V65 L80 125 L35 65 Z"
+        fill="#E74C3C"
+        filter="url(#innerGlow)"/>
+
+  <!-- Tech-line -->
+  <path d="M50 55 H110"
+        stroke="#E74C3C"
+        stroke-width="6"
+        stroke-linecap="round"
+        opacity="0.9"/>
+</svg>
